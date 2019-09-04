@@ -1,17 +1,17 @@
---  SELECT title, released_year AS year,
---    CASE
---      WHEN released_year >= 2000 THEN 'Modern Lit'
---      ELSE '20th Century Lit'
---    END AS 'Lit Era'
---  FROM books;
+SELECT title, released_year AS year,
+  CASE
+    WHEN released_year >= 2000 THEN 'Modern Lit'
+    ELSE '20th Century Lit'
+  END AS 'Lit Era'
+FROM books;
 
---  SELECT title, stock_quantity AS 'quantity',
---  CASE
---    WHEN stock_quantity >= 100 THEN '***'
---    WHEN stock_quantity BETWEEN 50 AND 99 THEN '**'
---    ELSE '*'
---  END AS 'stock'
---  FROM books ORDER BY stock_quantity;
+SELECT title, stock_quantity AS 'quantity',
+CASE
+  WHEN stock_quantity >= 100 THEN '***'
+  WHEN stock_quantity BETWEEN 50 AND 99 THEN '**'
+  ELSE '*'
+END AS 'stock'
+FROM books ORDER BY stock_quantity;
 
 SELECT title,
       CONCAT(
