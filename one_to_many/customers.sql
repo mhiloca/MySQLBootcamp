@@ -1,5 +1,5 @@
 CREATE TABLE customers(
-customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 first_name VARCHAR(50),
 last_name VARCHAR(50),
 email VARCHAR(50)
@@ -7,11 +7,11 @@ email VARCHAR(50)
 
 
 CREATE TABLE orders (
-order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 order_date DATE,
 amount DECIMAL(8,2),
 customer_id INT,
-FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+FOREIGN KEY(customer_id) REFERENCES customers(id)
 );
 
 INSERT INTO customers(first_name, last_name, email)
