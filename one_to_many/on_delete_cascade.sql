@@ -11,7 +11,9 @@ id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 order_date DATE,
 amount DECIMAL(8,2),
 customer_id INT,
-FOREIGN KEY(customer_id) REFERENCES customers(id)
+FOREIGN KEY(customer_id)
+  REFERENCES customers(id)
+  ON DELETE CASCADE
 );
 
 INSERT INTO customers(first_name, last_name, email)
@@ -28,6 +30,3 @@ VALUES ('2016/02/10', 99.99, 1),
        ('2015/01/03', 12.50, 2),
        ('1999/04/11', 450.25, 5);
 --
---  INSERT INTO orders(order_date, amount, customer_id)
---  VALUES ('2018/08/25', 98.76, 67),
---         (CURDATE(), 234.90, 110);
