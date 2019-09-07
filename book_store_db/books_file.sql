@@ -23,13 +23,13 @@ SELECT
 FROM books;
 
 SELECT
---  CONCAT(
---  SUBSTRING(author_fname, 1, 1)
---  , '. '
---  , UPPER(author_lname)
---  )
---  AS 'full name'
---FROM books;
+  CONCAT(
+  SUBSTRING(author_fname, 1, 1)
+  , '. '
+  , UPPER(author_lname)
+  )
+  AS 'full name'
+FROM books;
 
 SELECT
   UPPER(
