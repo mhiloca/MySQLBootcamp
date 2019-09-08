@@ -11,6 +11,8 @@ WHERE  Char_length(title) = (SELECT Min(Char_length(title))
                            LIMIT  1)
 ORDER  BY ( Char_length(title) );
 
+                                       
+-- This code works better (in two separated queries)
 SELECT city,
        Char_length(city)
 FROM   station
